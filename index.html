@@ -50,12 +50,19 @@
             width: 100px; /* Adjust width as needed */
             margin-right:25px;
         }
+        #refresh {
+            height:34px;
+            width:100px;
+        }
+            
+        }
     </style>
 </head>
 <body>
     <div id="controls">
-        <input type="text" id="urlInput" placeholder="Enter URL" value="https://example.com">
+        <input type="text" id="urlInput" placeholder="URL HERE" value="">
         <button id="updateButton">View</button>
+        <button id="refresh">Refresh</button>
         <button id="fullscreenButton">FullScreen</button>
     </div>
     <div id="iframeContainer">
@@ -66,7 +73,10 @@
             var url = document.getElementById('urlInput').value;
             document.getElementById('contentFrame').src = url;
         });
-
+        document.getElementById('refresh').addEventListener('click', function() {
+            var url = document.getElementById('urlInput').value;
+            document.getElementById('contentFrame').src = url;
+        });
         document.getElementById('fullscreenButton').addEventListener('click', function() {
             var iframe = document.getElementById('contentFrame');
             if (!document.fullscreenElement) {
