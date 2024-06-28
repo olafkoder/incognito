@@ -73,6 +73,7 @@
         <iframe id="contentFrame" src=""></iframe>
     </div>
     <script>
+        X-Frame-Options: DENY
         document.getElementById('updateButton').addEventListener('click', function() {
             var url = document.getElementById('urlInput').value;
             document.getElementById('contentFrame').src = url;
