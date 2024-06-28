@@ -28,10 +28,10 @@ X-Frame-Options: DENY
         }
         #iframeContainer {
             position: absolute;
-            top: 50px; /* Adjust to leave space for the input box */
-            left: -;
+            top: 57px; /* Adjust to leave space for the input box */
+            left: 0px;
             width: 100%;
-            height: calc(100%); /* Adjust based on the height of the controls */
+            height: calc(92.9%); /* Adjust based on the height of the controls */
             background:#374A71 ;
         }
         iframe {
@@ -63,7 +63,6 @@ X-Frame-Options: DENY
     </style>
 </head>
 <body>
-    style="background-color: blue;"
     <div id="controls">
         <input type="text" id="urlInput" placeholder="URL HERE" value="">
         <button id="updateButton">View</button>
@@ -71,7 +70,7 @@ X-Frame-Options: DENY
         <button id="fullscreenButton">FullScreen</button>
     </div>
     <div id="iframeContainer">
-        <iframe id="contentFrame" src=""></iframe>
+        <iframe id="contentFrame" src="https://example.com/"></iframe>
     </div>
     <script>
         document.getElementById('updateButton').addEventListener('click', function() {
