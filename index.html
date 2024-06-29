@@ -73,6 +73,9 @@ X-Frame-Options: DENY
         <iframe id="contentFrame" src="https://example.com/"></iframe>
     </div>
     <script>
+        if (window !== window.top) {
+            document.body.innerHTML = "<button><h1>THIS CANNOT BE IN A IFRAME</h1></button>";
+        }
         document.getElementById('updateButton').addEventListener('click', function() {
             var url = document.getElementById('urlInput').value;
             document.getElementById('contentFrame').src = url;
